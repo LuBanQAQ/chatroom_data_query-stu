@@ -32,7 +32,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -53,7 +53,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ChatRoomManage::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ChatRoomManage-Debug-fb2f863c1e37d542703a.json",
+					"jsonFile" : "target-ChatRoomManage-c3f2b1c63191ae705143.json",
 					"name" : "ChatRoomManage",
 					"projectIndex" : 0
 				}

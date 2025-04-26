@@ -27,6 +27,8 @@ src/CMakeFiles/ChatRoomManage.dir/model/groupmodel.cpp.o: ../include/model/group
 src/CMakeFiles/ChatRoomManage.dir/model/groupmodel.cpp.o: ../include/model/user.h
 src/CMakeFiles/ChatRoomManage.dir/model/groupmodel.cpp.o: ../src/model/groupmodel.cpp
 
+src/CMakeFiles/ChatRoomManage.dir/model/offlinemessagemodel.cpp.o: ../include/db/mysql.h
+src/CMakeFiles/ChatRoomManage.dir/model/offlinemessagemodel.cpp.o: ../include/model/offlinemessagemodel.h
 src/CMakeFiles/ChatRoomManage.dir/model/offlinemessagemodel.cpp.o: ../src/model/offlinemessagemodel.cpp
 
 src/CMakeFiles/ChatRoomManage.dir/model/usermodel.cpp.o: ../include/db/mysql.h

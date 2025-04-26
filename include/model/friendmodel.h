@@ -9,12 +9,13 @@ namespace ChatRoom {
 class FriendModel  {
 public:
     // 添加好友关系
-    
+    bool insert(int userid, int friendid);
     // 返回用户好友列表
     vector<User> query(int userid);   
     // 删除好友
-
+    bool remove(int userid, int friendid);
     // 统计好友个数
+    int count(int userid);
 };
 }
 

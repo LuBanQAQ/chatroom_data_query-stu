@@ -28,6 +28,8 @@ src/CMakeFiles/ChatRoomManage.dir/model/groupmodel.cpp.o
  ../include/model/user.h
  /home/cst/C++/chatroom_data_query-stu/src/model/groupmodel.cpp
 src/CMakeFiles/ChatRoomManage.dir/model/offlinemessagemodel.cpp.o
+ ../include/db/mysql.h
+ ../include/model/offlinemessagemodel.h
  /home/cst/C++/chatroom_data_query-stu/src/model/offlinemessagemodel.cpp
 src/CMakeFiles/ChatRoomManage.dir/model/usermodel.cpp.o
  ../include/db/mysql.h

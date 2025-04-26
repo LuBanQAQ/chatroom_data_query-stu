@@ -103,6 +103,10 @@ mysql.h
 /home/cst/C++/chatroom_data_query-stu/src/model/mysql.h
 
 /home/cst/C++/chatroom_data_query-stu/src/model/offlinemessagemodel.cpp
+offlinemessagemodel.h
+/home/cst/C++/chatroom_data_query-stu/src/model/offlinemessagemodel.h
+mysql.h
+/home/cst/C++/chatroom_data_query-stu/src/model/mysql.h
 
 /home/cst/C++/chatroom_data_query-stu/src/model/usermodel.cpp
 usermodel.h

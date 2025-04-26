@@ -152,8 +152,61 @@ void UserDataManage(){
     }
 
 }
-void FriendDataManage(){
+void FriendDataManage() {
     FriendModel friendModel;
+    print_menu();
+    int op;
+    cin >> op;
+    int userid, friendid;
+    switch(op) {
+        case QUERY: {
+            cout << YELLOW << "请输入用户ID: " << RESET;
+            cin >> userid;
+            auto vec = friendModel.query(userid);
+            if (vec.empty()) {
+                cout << RED << "无好友记录" << RESET << endl;
+            } else {
+                cout << GREEN << "好友列表如下：" << RESET << endl;
+                for (auto &u : vec) {
+                    cout << "  ID:" << u.getId()
+                         << " 名称:" << u.getName()
+                         << " 状态:" << u.getState() << endl;
+                }
+            }
+        } break;
+        case ADD: {
+            cout << YELLOW << "请输入用户ID: " << RESET;
+            cin >> userid;
+            cout << YELLOW << "请输入要添加的好友ID: " << RESET;
+            cin >> friendid;
+            bool r = friendModel.insert(userid, friendid);
+            cout << (r ? GREEN + "添加成功" : RED + "添加失败") << RESET << endl;
+        } break;
+        case DELETE: {
+            cout << YELLOW << "请输入用户ID: " << RESET;
+            cin >> userid;
+            cout << YELLOW << "请输入要删除的好友ID: " << RESET;
+            cin >> friendid;
+            bool r = friendModel.remove(userid, friendid);
+            cout << (r ? GREEN + "删除成功" : RED + "删除失败") << RESET << endl;
+        } break;
+        case UPDATE:
+            cout << YRED << "好友信息不支持更新操作" << RESET << endl;
+            break;
+        case STATISTIC: {
+            cout << YELLOW << "请输入用户ID: " << RESET;
+            cin >> userid;
+            int cnt = friendModel.count(userid);
+            if (cnt < 0) {
+                cout << RED << "统计失败" << RESET << endl;
+            } else {
+                cout << GREEN << "好友总数：" << cnt << RESET << endl;
+            }
+        } break;
+        default:
+            cout << RED << "输入错误，请重试" << RESET << endl;
+            break;
+    }
 }
 void GroupDataManage(){
     
