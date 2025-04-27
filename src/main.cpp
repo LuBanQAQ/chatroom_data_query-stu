@@ -28,20 +28,20 @@ enum Managetype{
     UPDATE,
     STATISTIC   //统计
 };
-void print_menu(){
+void print_UserDataManage_menu(){
     cout << "============欢迎来带东软校友通数据管理系统=================" << endl;
     cout << WHITE <<"请选择您的操作:"<< RESET <<endl;
-    cout << YELLOW <<"1.信息查询" << RESET << endl;
-    cout << YELLOW <<"2.信息添加" << RESET << endl;
-    cout << YELLOW <<"3.信息删除" << RESET << endl;
-    cout << YELLOW <<"4.信息更新" << RESET << endl;
-    cout << YELLOW <<"5.信息统计" << RESET << endl;
+    cout << YELLOW <<"1.用户信息查询" << RESET << endl;
+    cout << YELLOW <<"2.用户信息添加" << RESET << endl;
+    cout << YELLOW <<"3.用户信息删除" << RESET << endl;
+    cout << YELLOW <<"4.用户信息更新" << RESET << endl;
+    cout << YELLOW <<"5.用户信息统计" << RESET << endl;
     cout << "=========================================================" << endl;
     cout << BLUE <<"请输入:"<<RESET;
 };
 void UserDataManage(){
     UserModel userModel;
-    print_menu();
+    print_UserDataManage_menu();
     int choice = 0;
     cin >> choice;
     switch(choice){
@@ -152,9 +152,20 @@ void UserDataManage(){
     }
 
 }
+void print_FriendDataManage_menu(){
+    cout << "============欢迎来带东软校友通数据管理系统=================" << endl;
+    cout << WHITE <<"请选择您的操作:"<< RESET <<endl;
+    cout << YELLOW <<"1.好友信息查询" << RESET << endl;
+    cout << YELLOW <<"2.好友信息添加" << RESET << endl;
+    cout << YELLOW <<"3.好友信息删除" << RESET << endl;
+    cout << YELLOW <<"4.好友信息更新" << RESET << endl;
+    cout << YELLOW <<"5.好友信息统计" << RESET << endl;
+    cout << "=========================================================" << endl;
+    cout << BLUE <<"请输入:"<<RESET;
+};
 void FriendDataManage() {
     FriendModel friendModel;
-    print_menu();
+    print_FriendDataManage_menu();
     int op;
     cin >> op;
     int userid, friendid;
@@ -171,7 +182,7 @@ void FriendDataManage() {
                     cout << "  ID:" << u.getId()
                          << " 名称:" << u.getName()
                          << " 状态:" << u.getState() << endl;
-                }
+                }   
             }
         } break;
         case ADD: {
@@ -208,8 +219,23 @@ void FriendDataManage() {
             break;
     }
 }
+void print_GroupDataManage_menu(){
+    cout << "============欢迎来带东软校友通数据管理系统=================" << endl;
+    cout << WHITE <<"请选择您的操作:"<< RESET <<endl;
+    cout << YELLOW <<"1.查询群组信息" << RESET << endl;
+    cout << YELLOW <<"2.创建全新群组" << RESET << endl;
+    cout << YELLOW <<"3.添加群组成员" << RESET << endl;
+    cout << YELLOW <<"4.删除指定群组" << RESET << endl;
+    cout << YELLOW <<"5.群组信息统计" << RESET << endl;
+    cout << "=========================================================" << endl;
+    cout << BLUE <<"请输入:"<<RESET;
+};
 void GroupDataManage(){
-    
+    GroupModel groupModel;
+    print_GroupDataManage_menu();
+    int op;
+    cin >> op;
+    int groupid, userid;
 }
 void OfflineDataManage(){
     
