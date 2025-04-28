@@ -120,3 +120,70 @@ vector<int> GroupModel::queryGroupUsers(int userid, int groupid)
     }
     return idVec;
 }
+
+
+
+/**
+ * @brief 从数据库中删除一个群组及其关联的成员。
+ * 
+ * 此函数会先从 `groupuser` 表中删除指定群组的所有成员关系，
+ * 然后从 `allgroup` 表中删除该群组本身。
+ * 
+ * @param groupid 要删除的群组的 ID。
+ * @return 如果群组及其成员成功删除则返回 true，
+ *         否则返回 false
+ */
+bool GroupModel::removeGroup(int groupid)
+{
+    MySQL mysql;
+    if (!mysql.Connect())
+        return false;
+
+    // 先删除 groupuser 表中该群组的所有成员关系
+    char sql1[256] = {0};
+
+
+    sprintf(sql1, "DELETE FROM groupuser WHERE groupid=%d", groupid);
+    if (!mysql.Delete(sql1))
+        return false;
+
+    // 再删除 allgroup 表中的群组本身
+    char sql2[256] = {0};
+    sprintf(sql2, "DELETE FROM allgroup WHERE id=%d", groupid);
+    if (!mysql.Delete(sql2))
+        return false;
+
+    return true;
+}
+
+
+/**
+ * @brief 统计指定群组中用户的数量。
+ * 
+ * @param groupid 群组的唯一标识符。
+ * @return int 返回群组中的用户数量。如果查询失败，返回 -1。
+ * 
+ * 此函数通过执行 SQL 查询从数据库中获取指定群组的用户数量。
+ * 如果数据库连接失败或查询结果为空，则返回 -1。
+ */
+int GroupModel::countGroup(int groupid)
+{
+    char sql[256] = {0};
+    sprintf(sql, "SELECT COUNT(*) FROM groupuser WHERE groupid=%d", groupid);
+    MySQL mysql;
+    if (!mysql.Connect())
+        return -1;
+    MYSQL_RES* res = mysql.Query(sql);
+    if (!res){
+        return -1;
+    }
+        
+    MYSQL_ROW row = mysql_fetch_row(res);
+    int cnt = row ? atoi(row[0]) : -1;
+    mysql_free_result(res);
+    return cnt;
+}
+
+
+
+
