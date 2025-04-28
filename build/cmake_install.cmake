@@ -1,4 +1,4 @@
-# Install script for directory: /home/cst/C++/chatroom_data_query-stu
+# Install script for directory: /home/cst/chatroom_data_query-stu
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/cst/C++/chatroom_data_query-stu/build/src/cmake_install.cmake")
+  include("/home/cst/chatroom_data_query-stu/build/src/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cst/C++/chatroom_data_query-stu/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cst/chatroom_data_query-stu/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

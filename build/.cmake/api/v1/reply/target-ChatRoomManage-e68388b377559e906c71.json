@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/cst/C++/chatroom_data_query-stu/bin/ChatRoomManage"
+			"path" : "/home/cst/chatroom_data_query-stu/bin/ChatRoomManage"
 		}
 	],
 	"backtrace" : 1,
@@ -72,15 +72,15 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/home/cst/C++/chatroom_data_query-stu/include"
+					"path" : "/home/cst/chatroom_data_query-stu/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/home/cst/C++/chatroom_data_query-stu/include/db"
+					"path" : "/home/cst/chatroom_data_query-stu/include/db"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/home/cst/C++/chatroom_data_query-stu/include/model"
+					"path" : "/home/cst/chatroom_data_query-stu/include/model"
 				}
 			],
 			"language" : "CXX",

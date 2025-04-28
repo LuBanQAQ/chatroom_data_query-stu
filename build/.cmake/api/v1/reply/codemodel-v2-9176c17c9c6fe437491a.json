@@ -53,7 +53,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ChatRoomManage::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ChatRoomManage-c3f2b1c63191ae705143.json",
+					"jsonFile" : "target-ChatRoomManage-e68388b377559e906c71.json",
 					"name" : "ChatRoomManage",
 					"projectIndex" : 0
 				}
@@ -63,8 +63,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/cst/C++/chatroom_data_query-stu/build",
-		"source" : "/home/cst/C++/chatroom_data_query-stu"
+		"build" : "/home/cst/chatroom_data_query-stu/build",
+		"source" : "/home/cst/chatroom_data_query-stu"
 	},
 	"version" : 
 	{

@@ -686,8 +686,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/cst/C++/chatroom_data_query-stu/build",
-		"source" : "/home/cst/C++/chatroom_data_query-stu"
+		"build" : "/home/cst/chatroom_data_query-stu/build",
+		"source" : "/home/cst/chatroom_data_query-stu"
 	},
 	"version" : 
 	{

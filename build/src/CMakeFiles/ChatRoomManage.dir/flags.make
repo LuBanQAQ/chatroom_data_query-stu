@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/cst/C++/chatroom_data_query-stu/include -I/home/cst/C++/chatroom_data_query-stu/include/db -I/home/cst/C++/chatroom_data_query-stu/include/model 
+CXX_INCLUDES = -I/home/cst/chatroom_data_query-stu/include -I/home/cst/chatroom_data_query-stu/include/db -I/home/cst/chatroom_data_query-stu/include/model 
 

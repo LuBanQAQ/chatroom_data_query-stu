@@ -1,4 +1,4 @@
-# Install script for directory: /home/cst/C++/chatroom_data_query-stu/src
+# Install script for directory: /home/cst/chatroom_data_query-stu/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

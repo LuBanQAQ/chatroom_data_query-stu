@@ -58,31 +58,31 @@ user.h
 vector
 -
 
-/home/cst/C++/chatroom_data_query-stu/src/db/mysql.cpp
+/home/cst/chatroom_data_query-stu/src/db/mysql.cpp
 mysql.h
-/home/cst/C++/chatroom_data_query-stu/src/db/mysql.h
+/home/cst/chatroom_data_query-stu/src/db/mysql.h
 const.h
-/home/cst/C++/chatroom_data_query-stu/src/db/const.h
+/home/cst/chatroom_data_query-stu/src/db/const.h
 
-/home/cst/C++/chatroom_data_query-stu/src/main.cpp
+/home/cst/chatroom_data_query-stu/src/main.cpp
 mysql.h
-/home/cst/C++/chatroom_data_query-stu/src/mysql.h
+/home/cst/chatroom_data_query-stu/src/mysql.h
 iostream
 -
 user.h
-/home/cst/C++/chatroom_data_query-stu/src/user.h
+/home/cst/chatroom_data_query-stu/src/user.h
 group.h
-/home/cst/C++/chatroom_data_query-stu/src/group.h
+/home/cst/chatroom_data_query-stu/src/group.h
 groupuser.h
-/home/cst/C++/chatroom_data_query-stu/src/groupuser.h
+/home/cst/chatroom_data_query-stu/src/groupuser.h
 friendmodel.h
-/home/cst/C++/chatroom_data_query-stu/src/friendmodel.h
+/home/cst/chatroom_data_query-stu/src/friendmodel.h
 groupmodel.h
-/home/cst/C++/chatroom_data_query-stu/src/groupmodel.h
+/home/cst/chatroom_data_query-stu/src/groupmodel.h
 usermodel.h
-/home/cst/C++/chatroom_data_query-stu/src/usermodel.h
+/home/cst/chatroom_data_query-stu/src/usermodel.h
 offlinemessagemodel.h
-/home/cst/C++/chatroom_data_query-stu/src/offlinemessagemodel.h
+/home/cst/chatroom_data_query-stu/src/offlinemessagemodel.h
 map
 -
 vector
@@ -90,29 +90,29 @@ vector
 string
 -
 
-/home/cst/C++/chatroom_data_query-stu/src/model/friendmoel.cpp
+/home/cst/chatroom_data_query-stu/src/model/friendmoel.cpp
 friendmodel.h
-/home/cst/C++/chatroom_data_query-stu/src/model/friendmodel.h
+/home/cst/chatroom_data_query-stu/src/model/friendmodel.h
 mysql.h
-/home/cst/C++/chatroom_data_query-stu/src/model/mysql.h
+/home/cst/chatroom_data_query-stu/src/model/mysql.h
 
-/home/cst/C++/chatroom_data_query-stu/src/model/groupmodel.cpp
+/home/cst/chatroom_data_query-stu/src/model/groupmodel.cpp
 groupmodel.h
-/home/cst/C++/chatroom_data_query-stu/src/model/groupmodel.h
+/home/cst/chatroom_data_query-stu/src/model/groupmodel.h
 mysql.h
-/home/cst/C++/chatroom_data_query-stu/src/model/mysql.h
+/home/cst/chatroom_data_query-stu/src/model/mysql.h
 
-/home/cst/C++/chatroom_data_query-stu/src/model/offlinemessagemodel.cpp
+/home/cst/chatroom_data_query-stu/src/model/offlinemessagemodel.cpp
 offlinemessagemodel.h
-/home/cst/C++/chatroom_data_query-stu/src/model/offlinemessagemodel.h
+/home/cst/chatroom_data_query-stu/src/model/offlinemessagemodel.h
 mysql.h
-/home/cst/C++/chatroom_data_query-stu/src/model/mysql.h
+/home/cst/chatroom_data_query-stu/src/model/mysql.h
 
-/home/cst/C++/chatroom_data_query-stu/src/model/usermodel.cpp
+/home/cst/chatroom_data_query-stu/src/model/usermodel.cpp
 usermodel.h
-/home/cst/C++/chatroom_data_query-stu/src/model/usermodel.h
+/home/cst/chatroom_data_query-stu/src/model/usermodel.h
 mysql.h
-/home/cst/C++/chatroom_data_query-stu/src/model/mysql.h
+/home/cst/chatroom_data_query-stu/src/model/mysql.h
 iostream
 -
 vector
