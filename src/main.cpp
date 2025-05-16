@@ -237,22 +237,91 @@ void FriendDataManage() {
     }
 }
 void print_GroupDataManage_menu(){
-    std::cout << "============欢迎来带东软校友通数据管理系统=================" << std::endl;
-    std::cout << WHITE <<"请选择您的操作:"<< RESET <<std::endl;
-    std::cout << YELLOW <<"1.查询群组信息" << RESET << std::endl;
-    std::cout << YELLOW <<"2.创建全新群组" << RESET << std::endl;
-    std::cout << YELLOW <<"3.添加群组成员" << RESET << std::endl;
-    std::cout << YELLOW <<"4.删除指定群组" << RESET << std::endl;
-    std::cout << YELLOW <<"0.群组信息统计" << RESET << std::endl;
-    std::cout << "=========================================================" << std::endl;
+    
+    cout << "============欢迎来带东软校友通数据管理系统=================" << endl;
+    std::cout << WHITE <<"请选择您的操作:"<< RESET <<endl;
+    std::cout << YELLOW <<"1.查询群组信息" << RESET << endl;
+    std::cout << YELLOW <<"2.创建全新群组" << RESET << endl;
+    std::cout << YELLOW <<"3.添加群组成员" << RESET << endl;
+    std::cout << YELLOW <<"4.删除指定群组" << RESET << endl;
+    cout << "=========================================================" << endl;
     std::cout << BLUE <<"请输入:"<<RESET;
 };
-void GroupDataManage(){
+void GroupDataManage() {
     GroupModel groupModel;
-    print_GroupDataManage_menu();
+    
     int op;
-    std::cin >> op;
-    int groupid, userid;
+    while(1){
+        print_GroupDataManage_menu();
+         std::cin >> op;
+         switch (op) {
+        case 1: { // 查询群组信息
+            int userid;
+            std::cout << "请输入用户ID: ";
+            std::cin >> userid;
+            std::vector<Group> groups = groupModel.queryGroups(userid);
+            std::cout << "============= 用户" << userid << "的群组信息 =============\n";
+            for (Group group : groups) {
+                std::cout << "群组ID: " << group.getId()<<endl
+                          << "名称: " << group.getName()<<endl
+                          << "描述: " << group.getDesc()<<endl
+                          << "成员列表:"<<endl;
+                for (GroupUser user : group.getUsers()) {
+                    std::cout << " ID:" << user.getId()
+                              << " 姓名:" << user.getName()
+                              << " 状态:" << user.getState()
+                              << " 角色:" << user.getRole() << "\n";
+                }
+                std::cout << "----------------------------------------\n";
+            }
+            break;
+        }
+        case 2: { // 创建群组
+            std::string name, desc;
+            std::cout << "请输入群组名称: ";
+            std::cin.ignore();
+            std::getline(std::cin, name);
+            std::cout << "请输入群组描述: ";
+            std::getline(std::cin, desc);
+
+            Group group;
+            group.setName(name);
+            group.setDesc(desc);
+            if (groupModel.createGroup(group)) {
+                std::cout << "创建成功！群组ID: " << group.getId() << "\n";
+            } else {
+                std::cerr << "创建失败\n";
+            }
+            break;
+        }
+        case 3: { // 添加成员
+            int groupid, userid;
+            std::string role;
+            std::cout << "请输入群组ID: ";
+            std::cin >> groupid;
+            std::cout << "请输入用户ID: ";
+            std::cin >> userid;
+            std::cout << "请输入描述: ";
+            std::cin.ignore();
+            std::getline(std::cin, role);
+
+            groupModel.addGroup(userid, groupid, role);
+            std::cout << "添加成功\n";
+            break;
+        }
+        case 4: { // 删除群组
+            int groupid;
+            std::cout << "请输入要删除的群组ID: ";
+            std::cin >> groupid;
+            if (groupModel.removeGroup(groupid)) {
+                std::cout << "群组" << groupid << "已删除\n";
+            } else {
+                std::cout << "删除失败\n";
+            }
+            break;
+        }
+    }
+    }
 }
 void print_OfflineDataManage_menu(){
     std::cout << "============欢迎来带东软校友通数据管理系统=================" << std::endl;
